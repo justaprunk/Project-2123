@@ -1,1 +1,41 @@
+#include <iostream>
+using namespace std;
 
+int* SelectionSort(int* array, int size);
+
+int main() 
+{
+	int const size = 5;
+	int array[size];
+
+	cout << "Enter the array:" << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cin >> array[i];
+	}
+
+	cout << SelectionSort(array, size) << endl;
+
+	return 0;
+}
+
+int* SelectionSort(int* array, int size)
+{
+	int temp_value, temp_number, j;
+
+	for (int i = 0; i < size - 1; i++)
+	{
+		temp_value = array[i]; temp_number = i;
+		for (j = i + 1; j < size; j++)
+			if (array[j] < array[temp_number]) temp_number = j;
+		if (temp_number != i)
+		{
+			array[i] = array[temp_number];
+			array[temp_number] = temp_value;
+		}
+	}
+	for (int i = 0; i < size; i++)
+	{
+		return array;
+	}
+}
