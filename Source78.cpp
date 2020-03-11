@@ -5,6 +5,7 @@ int LinearSearch(int value, int* array);
 	
 int main()
 {
+	
 	int const n = 4;
 	int value;
 	int array[n];
@@ -18,7 +19,9 @@ int main()
 	{
 		cin >> array[i];
 	}
+	
 cout << LinearSearch(value, array) << endl;
+
 };
 	
 int LinearSearch(int value, int* array)
